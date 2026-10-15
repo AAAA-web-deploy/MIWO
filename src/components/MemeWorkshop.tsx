@@ -62,7 +62,7 @@ export function MemeWorkshop({ spriteId, onSprite }: Props) {
     >
       <div
         className={styles.backdrop}
-        style={{ backgroundImage: `linear-gradient(180deg, rgba(255, 250, 243, 0.22), rgba(22, 48, 74, 0.45)), url(${scenes.oceanWide})` }}
+        style={{ backgroundImage: `linear-gradient(180deg, rgba(255, 250, 243, 0.14), rgba(22, 48, 74, 0.22)), url(${scenes.oceanWide})` }}
         aria-hidden="true"
       />
       <div className={styles.plank}>

@@ -29,10 +29,7 @@
   pointer-events: none;
 }
 
-.surface, .depth {
-  filter: brightness(1.12) saturate(0.9) blur(9px);
-  transform: scale(1.08);
-}
+.surface, .depth { filter: brightness(1.06) saturate(0.96); }
 
 .surface { object-position: center 45%; }
 

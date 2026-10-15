@@ -1,25 +1,10 @@
 .hatch {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
   color: #fffaf3;
   padding: 4.5rem 1rem 3.5rem;
-  background: #16385a;
-}
-
-.hatch::before {
-  content: "";
-  position: absolute;
-  inset: -28px;
-  z-index: 0;
-  background: linear-gradient(180deg, #3d7ea0, #1d4e72 42%, #16385a);
-  filter: blur(9px);
-  transform: scale(1.06);
+  background: linear-gradient(180deg, #4e90b4, #2a6288 42%, #1d4a6e);
 }
 
 .water {
-  position: relative;
-  z-index: 1;
   width: min(640px, 100%);
   margin: 0 auto;
   text-align: center;
