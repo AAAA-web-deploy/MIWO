@@ -1,12 +1,25 @@
 .dock {
   position: relative;
+  isolation: isolate;
+  overflow: hidden;
   padding: 4rem 1rem 5.5rem;
   background-color: #091a33;
+}
+
+.backdrop {
+  position: absolute;
+  inset: -28px;
+  z-index: 0;
   background-position: center;
   background-size: cover;
+  filter: blur(12px);
+  transform: scale(1.06);
+  pointer-events: none;
 }
 
 .plank {
+  position: relative;
+  z-index: 1;
   width: min(1080px, 100%);
   margin: 0 auto;
   padding: 1.3rem 1rem 1.4rem;

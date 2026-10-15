@@ -12,11 +12,13 @@ import { PostcardEnd } from './components/PostcardEnd';
 import { BagDrawer } from './components/BagDrawer';
 import { CrewDialog } from './components/CrewDialog';
 import { TailGuide } from './components/TailGuide';
+import { usePageFade } from './hooks/usePageFade';
 
 type Overlay = 'bag' | 'crew' | null;
 
 export function App() {
   const reduced = usePrefersReducedMotion();
+  usePageFade(!reduced);
   const startQuiet = reduced || hasSeenIntro();
   const [mode, setMode] = useState<'intro' | 'ready'>(startQuiet ? 'ready' : 'intro');
   const [run, setRun] = useState(0);

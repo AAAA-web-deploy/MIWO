@@ -58,9 +58,13 @@ export function MemeWorkshop({ spriteId, onSprite }: Props) {
     <section
       id="workshop"
       className={styles.dock}
-      style={{ backgroundImage: `linear-gradient(180deg, rgba(255, 250, 243, 0.22), rgba(22, 48, 74, 0.45)), url(${scenes.oceanWide})` }}
       aria-labelledby="workshop-title"
     >
+      <div
+        className={styles.backdrop}
+        style={{ backgroundImage: `linear-gradient(180deg, rgba(255, 250, 243, 0.22), rgba(22, 48, 74, 0.45)), url(${scenes.oceanWide})` }}
+        aria-hidden="true"
+      />
       <div className={styles.plank}>
         <header>
           <h2 id="workshop-title">MAKE YOUR MIWO MOMENT</h2>

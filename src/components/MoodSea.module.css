@@ -17,7 +17,8 @@
   object-fit: cover;
   opacity: 1;
   object-position: center 40%;
-  filter: brightness(1.12) saturate(0.9);
+  filter: brightness(1.12) saturate(0.9) blur(12px);
+  transform: scale(1.08);
   pointer-events: none;
 }
 
