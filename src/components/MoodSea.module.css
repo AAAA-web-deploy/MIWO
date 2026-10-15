@@ -176,8 +176,19 @@
 }
 
 @media (max-width: 899px) {
+  .sea { padding-top: 8.5rem; overflow: visible; }
   .bubble { width: min(70vw, 240px); }
   .orb { width: min(64vw, 220px); height: min(64vw, 220px); }
+}
+
+@media (max-width: 760px) {
+  .sea { padding: 11.5rem 1rem 3rem; }
+  .field { gap: 1.25rem; }
+  .slot:nth-child(odd),
+  .slot:nth-child(even) { align-self: center; margin: 0; }
+  .bubble { width: min(58vw, 200px); }
+  .orb { width: min(50vw, 170px); height: min(50vw, 170px); }
+  .head h2 { font-size: clamp(1.65rem, 7.5vw, 2.2rem); }
 }
 
 @media (min-width: 900px) {

@@ -50,6 +50,10 @@ main > * + * { margin-top: 2.25rem; }
 
 section, footer { scroll-margin-top: 5.5rem; }
 
+@media (max-width: 760px) {
+  section, footer { scroll-margin-top: 11.5rem; }
+}
+
 img { max-width: 100%; height: auto; }
 
 button, a { touch-action: manipulation; }

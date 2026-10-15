@@ -77,3 +77,12 @@
   color: #fffaf3;
   text-shadow: 0 3px 10px rgba(8, 20, 40, 0.55);
 }
+
+@media (max-width: 760px) {
+  .descent {
+    padding: 11.5rem 1rem 2.5rem;
+    overflow: visible;
+  }
+
+  .story { width: min(640px, 100%); }
+}

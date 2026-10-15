@@ -190,6 +190,20 @@ textarea {
   overflow-wrap: anywhere;
 }
 
+@media (max-width: 899px) {
+  .dock { padding-top: 8.5rem; overflow: visible; }
+  .picker {
+    flex-wrap: wrap;
+    overflow: visible;
+    justify-content: center;
+  }
+  .picker button { width: calc(33.33% - 0.4rem); min-width: 96px; }
+}
+
+@media (max-width: 760px) {
+  .dock { padding-top: 11.5rem; }
+}
+
 @media (min-width: 900px) {
   .plank { padding: 1.6rem 1.4rem 1.6rem; }
   .layout { grid-template-columns: 1.1fr 0.9fr; align-items: start; }

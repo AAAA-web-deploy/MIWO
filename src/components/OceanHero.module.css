@@ -291,14 +291,32 @@
 }
 
 @media (max-width: 899px) {
-  .hero { padding-top: 9.2rem; }
-  .copy { display: contents; }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100svh;
+    overflow: visible;
+    padding: 8.5rem 1rem 1.6rem;
+  }
+  .copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    gap: 0.2rem;
+  }
   .copy h1,
   .ticker,
-  .slogan { order: 1; width: 100%; text-align: center; }
-  .miwoSlot { order: 2; }
-  .actions { order: 3; width: 100%; position: relative; z-index: 6; }
-  .confidence { order: 4; width: 100%; text-align: center; }
+  .slogan,
+  .confidence { width: 100%; text-align: center; }
+  .actions { width: 100%; justify-items: center; }
+}
+
+@media (max-width: 760px) {
+  .hero { padding-top: 11.5rem; }
+  .copy h1 { font-size: clamp(2.35rem, 12vw, 3rem); }
 }
 
 @media (min-width: 900px) {
