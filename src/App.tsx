@@ -7,7 +7,6 @@ import { OceanHero } from './components/OceanHero';
 import { Descent } from './components/Descent';
 import { MoodSea } from './components/MoodSea';
 import { MemeWorkshop } from './components/MemeWorkshop';
-import { Hatch } from './components/Hatch';
 import { PostcardEnd } from './components/PostcardEnd';
 import { BagDrawer } from './components/BagDrawer';
 import { CrewDialog } from './components/CrewDialog';
@@ -127,7 +126,7 @@ export function App() {
         <IntroStage key={run} active={mode === 'intro'} fading={mode === 'ready'} onDone={finishIntro} />
       )}
       <main id="content" tabIndex={-1} aria-hidden={mode === 'intro' ? true : undefined}>
-        <OceanHero whaleOn={whaleOn} onWhale={setWhaleOn} />
+        <OceanHero whaleOn={whaleOn} onWhale={setWhaleOn} onOpen={openBag} />
         <Descent />
         <MoodSea
           activeId={moodId}
@@ -139,7 +138,6 @@ export function App() {
           onMake={(id) => openWorkshop(id)}
         />
         <MemeWorkshop spriteId={spriteId} onSprite={setSpriteId} />
-        <Hatch onOpen={openBag} />
         <PostcardEnd onReplay={replay} note={note} />
       </main>
       <TailGuide />
