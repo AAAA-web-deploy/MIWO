@@ -22,21 +22,17 @@
 .surface,
 .depth {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center center;
+  filter: brightness(1.06) saturate(0.96);
   pointer-events: none;
 }
 
-.surface, .depth { filter: brightness(1.06) saturate(0.96); }
-
-.surface { object-position: center 45%; }
-
-.depth {
-  opacity: var(--depth);
-  object-position: center 40%;
-}
+.depth { opacity: var(--depth); }
 
 .rays {
   position: absolute;
