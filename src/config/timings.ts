@@ -9,19 +9,19 @@
 export const DESKTOP_TIMINGS = {
   loadingMin: 700,
   loadingMax: 1600,
-  eyes: 1000,
-  reveal: 1300,
-  dream: 1500,
-  suit: 800,
+  eyes: 2400,
+  reveal: 1500,
+  dream: 1900,
+  splash: 1200,
 } as const;
 
 export const MOBILE_TIMINGS = {
   loadingMin: 450,
   loadingMax: 1000,
-  eyes: 650,
-  reveal: 850,
-  dream: 950,
-  suit: 600,
+  eyes: 1700,
+  reveal: 1000,
+  dream: 1200,
+  splash: 800,
 } as const;
 
 export const WHALE_MODE_MS = 2600;
@@ -32,7 +32,7 @@ export type SceneTimings = {
   eyes: number;
   reveal: number;
   dream: number;
-  suit: number;
+  splash: number;
 };
 
 export function timingsForViewport(): SceneTimings {

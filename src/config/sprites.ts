@@ -1,4 +1,4 @@
-import { art } from '../assets';
+import { scenes } from './scenes';
 
 export type Sprite = {
   id: string;
@@ -15,21 +15,21 @@ export const SPRITES: Sprite[] = [
   {
     id: 'original',
     label: 'Original MIWO',
-    src: art.original,
+    src: scenes.original,
     alt: 'MIWO, a small round black creature with cream eyes, a curly tuft, and a lavender tie, waving',
     group: 'character',
   },
   {
     id: 'costume',
     label: 'Whale costume',
-    src: art.costume,
+    src: scenes.costume,
     alt: 'MIWO wearing a blue whale costume, lavender tie still visible',
     group: 'character',
   },
   {
     id: 'calm_confidence',
     label: 'Calm confidence',
-    src: art.calm,
+    src: scenes.reactions.calm,
     alt: 'MIWO looking calmly confident',
     line: 'I have a plan. Please don\u2019t ask about it.',
     group: 'reaction',
@@ -39,7 +39,7 @@ export const SPRITES: Sprite[] = [
   {
     id: 'temptation',
     label: 'Temptation',
-    src: art.temptation,
+    src: scenes.reactions.temptation,
     alt: 'MIWO looking tempted, one hand reaching',
     line: 'Just one little buy. What could happen?',
     group: 'reaction',
@@ -49,7 +49,7 @@ export const SPRITES: Sprite[] = [
   {
     id: 'suspicion',
     label: 'Suspicion',
-    src: art.suspicion,
+    src: scenes.reactions.suspicion,
     alt: 'MIWO squinting with suspicion, hand on chin',
     line: 'The whale bought. Why am I nervous?',
     group: 'reaction',
@@ -59,7 +59,7 @@ export const SPRITES: Sprite[] = [
   {
     id: 'embarrassment',
     label: 'Embarrassment',
-    src: art.embarrassment,
+    src: scenes.reactions.embarrassment,
     alt: 'MIWO blushing and looking away',
     line: 'I called the bottom. Again.',
     group: 'reaction',
@@ -69,7 +69,7 @@ export const SPRITES: Sprite[] = [
   {
     id: 'relief',
     label: 'Relief',
-    src: art.relief,
+    src: scenes.reactions.relief,
     alt: 'MIWO with eyes closed, exhaling in relief',
     line: 'Sold for peace. Still checking.',
     group: 'reaction',
@@ -79,7 +79,7 @@ export const SPRITES: Sprite[] = [
   {
     id: 'delight',
     label: 'Delight',
-    src: art.delight,
+    src: scenes.reactions.delight,
     alt: 'MIWO grinning with both hands up',
     line: 'Up forty cents. Practically institutional.',
     group: 'reaction',
@@ -89,7 +89,7 @@ export const SPRITES: Sprite[] = [
   {
     id: 'patience',
     label: 'Patience',
-    src: art.patience,
+    src: scenes.reactions.patience,
     alt: 'MIWO waiting with a small patient smile',
     line: 'No position. Infinite opinions.',
     group: 'reaction',
@@ -99,7 +99,7 @@ export const SPRITES: Sprite[] = [
   {
     id: 'exaggerated_focus',
     label: 'Exaggerated focus',
-    src: art.focus,
+    src: scenes.reactions.focus,
     alt: 'MIWO staring hard, tiny candle shapes in the pupils',
     line: 'Micro bag. Full-screen emotions.',
     group: 'reaction',

@@ -1,4 +1,4 @@
-import { art } from '../assets';
+import { scenes } from '../config/scenes';
 import styles from './FloatNav.module.css';
 
 type Props = {
@@ -13,7 +13,7 @@ export function FloatNav({ introActive, onSkip, onCrew, onBag, onMeme }: Props) 
   return (
     <div className={`${styles.bar} ${introActive ? styles.withSkip : ''}`}>
       <a className={styles.logo} href="#ocean" aria-label="MICRO PANIC, back to the surface">
-        <img src={art.logo} alt="" width={369} height={377} />
+        <img src={scenes.logo} alt="" width={369} height={377} />
       </a>
       <nav className={styles.nav} aria-label="Crew and bag">
         <button type="button" onClick={onCrew}>CREW</button>

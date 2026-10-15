@@ -1,18 +1,17 @@
 import { useEffect, useRef, useState } from 'react';
-import { art, CRITICAL_ART } from '../assets';
+import { CRITICAL_SCENES, EYE_PAIRS, scenes } from '../config/scenes';
 import { timingsForViewport, type SceneTimings } from '../config/timings';
 import { preloadImages } from '../lib/preload';
-import { Eyes } from './Eyes';
 import styles from './IntroStage.module.css';
 
-type Scene = 'loading' | 'eyes' | 'reveal' | 'dream' | 'suit';
+type Scene = 'loading' | 'eyes' | 'reveal' | 'dream' | 'splash';
 
 const CAPTION: Record<Scene, string> = {
   loading: '',
   eyes: '',
   reveal: 'Meet MIWO.',
   dream: "Someday... I'll be a whale.",
-  suit: 'Whale mode: ON.',
+  splash: '',
 };
 
 type Props = {
@@ -50,9 +49,9 @@ export function IntroStage({ active, fading, onDone }: Props) {
         const spent = performance.now() - started;
         setProgress(Math.min(92, 8 + (spent / T.loadingMax) * 84));
       }, 80);
-      timers.push(progressTimer);
 
-      await Promise.race([preloadImages(CRITICAL_ART), wait(T.loadingMax)]);
+      await Promise.race([preloadImages(CRITICAL_SCENES), wait(T.loadingMax)]);
+      window.clearInterval(progressTimer);
       if (cancel) return;
       const spent = performance.now() - started;
       if (spent < T.loadingMin) await wait(T.loadingMin - spent);
@@ -67,8 +66,8 @@ export function IntroStage({ active, fading, onDone }: Props) {
       setScene('dream');
       await wait(T.dream);
       if (cancel) return;
-      setScene('suit');
-      await wait(T.suit);
+      setScene('splash');
+      await wait(T.splash);
       if (cancel) return;
       finish();
     };
@@ -104,14 +103,31 @@ export function IntroStage({ active, fading, onDone }: Props) {
       role="region"
       aria-label="Opening"
     >
-      <img className={styles.void} src={art.introVoid} alt="" />
-      <img className={styles.dreamBg} src={art.dreamSky} alt="" />
-      <div className={styles.spotlight} />
-      <div className={styles.dawn} />
+      <div className={styles.eyeLayer} aria-hidden={scene === 'eyes' ? undefined : true}>
+        {EYE_PAIRS.map((eye) => (
+          <img
+            key={eye.id}
+            className={styles.eye}
+            data-mood={eye.id}
+            src={eye.src}
+            alt={scene === 'eyes' ? eye.label : ''}
+          />
+        ))}
+      </div>
+
+      <div className={styles.spotlight} aria-hidden="true" />
+      <img
+        className={styles.bare}
+        src={scenes.original}
+        alt={scene === 'reveal' ? 'MIWO waving, lavender tie visible, no whale costume' : ''}
+      />
+
+      <img className={styles.dreamPlate} src={scenes.dream} alt="" />
+      <img className={styles.splashPlate} src={scenes.splash} alt="" />
 
       {scene === 'loading' && (
         <div className={styles.loader}>
-          <Eyes className={styles.tinyEyes} glance={false} />
+          <img className={styles.tinyEyes} src={scenes.eyes.curious} alt="" />
           <p>OPENING MIWO&apos;S LITTLE WORLD...</p>
           <div
             className={styles.track}
@@ -125,23 +141,6 @@ export function IntroStage({ active, fading, onDone }: Props) {
           </div>
         </div>
       )}
-
-      <div className={styles.eyeLayer} aria-hidden={scene === 'loading' || scene === 'eyes' ? undefined : true}>
-        {scene !== 'loading' && <Eyes />}
-      </div>
-
-      <img className={styles.bare} src={art.original} alt={scene === 'reveal' ? 'MIWO waving, lavender tie visible' : ''} />
-      <img className={styles.suited} src={art.costume} alt={scene === 'suit' ? 'MIWO in a blue whale costume' : ''} />
-
-      <div className={styles.thoughts} aria-hidden="true">
-        <span />
-        <span />
-        <img src={art.whaleTail} alt="" />
-      </div>
-
-      <div className={styles.splash} aria-hidden="true">
-        <img src={art.whaleTail} alt="" />
-      </div>
 
       {caption && (
         <p className={styles.caption} aria-live="polite">

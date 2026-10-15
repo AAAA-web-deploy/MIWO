@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { scenes } from '../config/scenes';
 import { SPRITES, spriteById } from '../config/sprites';
 import { renderMemePng, sanitizeCaption } from '../lib/memeCanvas';
 import styles from './MemeWorkshop.module.css';
@@ -54,7 +55,12 @@ export function MemeWorkshop({ spriteId, onSprite }: Props) {
   };
 
   return (
-    <section id="workshop" className={styles.dock} aria-labelledby="workshop-title">
+    <section
+      id="workshop"
+      className={styles.dock}
+      style={{ backgroundImage: `linear-gradient(180deg, rgba(7, 18, 36, 0.28), rgba(7, 18, 36, 0.62)), url(${scenes.oceanWide})` }}
+      aria-labelledby="workshop-title"
+    >
       <div className={styles.plank}>
         <header>
           <h2 id="workshop-title">MAKE YOUR MIWO MOMENT</h2>

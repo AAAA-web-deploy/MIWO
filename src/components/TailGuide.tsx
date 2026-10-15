@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { art } from '../assets';
+import { scenes } from '../config/scenes';
 import styles from './TailGuide.module.css';
 
 export function TailGuide() {
@@ -25,5 +25,5 @@ export function TailGuide() {
     };
   }, []);
 
-  return <img ref={ref} className={styles.tail} src={art.whaleTail} alt="" />;
+  return <img ref={ref} className={styles.tail} src={scenes.wave} alt="" />;
 }

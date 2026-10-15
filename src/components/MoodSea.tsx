@@ -1,4 +1,4 @@
-import { art } from '../assets';
+import { scenes } from '../config/scenes';
 import { REACTIONS } from '../config/sprites';
 import { Dialog } from './Dialog';
 import styles from './MoodSea.module.css';
@@ -15,7 +15,7 @@ export function MoodSea({ activeId, onOpen, onClose, onMake }: Props) {
 
   return (
     <section id="feelings" className={styles.sea} aria-labelledby="feelings-title">
-      <img className={styles.depth} src={art.oceanDepth} alt="" />
+      <img className={styles.depth} src={scenes.underwater} alt="" loading="lazy" />
       <div className={styles.caustics} aria-hidden="true" />
       <header className={styles.head}>
         <h2 id="feelings-title">HOW MICRO ARE YOUR FEELINGS TODAY?</h2>

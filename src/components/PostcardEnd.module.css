@@ -1,32 +1,51 @@
 .end {
   position: relative;
-  padding: 4rem 1rem 3rem;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  align-content: end;
+  justify-items: center;
+  gap: 0.8rem;
+  padding: 18vh 1rem 2.4rem;
   text-align: center;
   color: #fff7e6;
-  background:
-    radial-gradient(ellipse at 50% 0%, rgba(186, 161, 234, 0.18), transparent 42%),
-    linear-gradient(180deg, #071525 0%, #050b16 100%);
+  overflow: hidden;
+  background: #1a120c;
 }
 
-.wood {
-  width: min(340px, 86vw);
-  margin: 0 auto 1rem;
-  padding: 1.2rem 0.8rem 1.4rem;
-  border-radius: 18px;
-  background: linear-gradient(90deg, #6b4428, #a56b3c 20%, #8a552c 48%, #c48955 70%, #6a4124);
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.35);
-  transform: rotate(-4deg);
+.finale {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
 }
 
-.card {
-  width: clamp(230px, 70vw, 280px);
-  height: auto;
-  border-radius: 8px;
-  border: 6px solid #fffaf2;
-  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.28);
-  transform: rotate(3deg);
-  display: block;
-  margin: 0 auto;
+.caption,
+.dream,
+.tools,
+.card,
+.panic,
+.fine,
+.logo,
+.end > p {
+  position: relative;
+  z-index: 1;
+}
+
+.caption {
+  position: absolute;
+  z-index: 1;
+  top: 14%;
+  left: 50%;
+  translate: -50% 0;
+  margin: 0;
+  max-width: 14ch;
+  font-family: Fredoka, Nunito, sans-serif;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  line-height: 0.95;
+  text-shadow: 0 10px 24px rgba(40, 16, 8, 0.55);
 }
 
 .dream, .tools button {
@@ -38,45 +57,42 @@
 
 .dream {
   border: 0;
-  background: transparent;
-  color: #fff7e6;
-  font-family: Fredoka, Nunito, sans-serif;
-  font-size: clamp(1.15rem, 3vw, 1.5rem);
-  padding: 0.4rem 0.8rem;
+  background: #fff4d8;
+  color: #3a2414;
+  padding: 0.75rem 1.1rem;
+}
+
+.card {
+  width: 92px;
+  height: auto;
+  border-radius: 6px;
+  border: 3px solid #fffaf2;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.28);
 }
 
 .tools {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
   justify-content: center;
-  margin-top: 0.6rem;
+  gap: 0.5rem;
 }
 
 .tools button {
-  min-height: 46px;
-  padding: 0.55rem 0.9rem;
-  border: 1px solid rgba(255, 247, 230, 0.35);
-  background: rgba(255, 247, 230, 0.08);
+  border: 1px solid rgba(255, 247, 230, 0.5);
+  background: rgba(28, 16, 10, 0.45);
   color: #fff7e6;
+  padding: 0.55rem 0.85rem;
 }
-
-.panic, .end p { font-weight: 700; }
 
 .fine {
-  width: min(560px, 92vw);
-  margin: 1rem auto 0;
-  color: #c9d7ea;
-  font-size: 0.92rem;
+  max-width: 42rem;
+  margin: 0;
+  font-size: 0.82rem;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
 }
 
-.logo {
-  width: 64px;
-  height: 64px;
-  margin-top: 1rem;
-  border-radius: 50%;
-}
+.logo { width: 56px; height: auto; }
 
-@media (min-width: 900px) {
-  .card { width: clamp(280px, 22vw, 340px); }
+@media (max-width: 760px) {
+  .finale { object-position: 42% 48%; }
 }

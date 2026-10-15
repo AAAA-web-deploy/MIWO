@@ -19,14 +19,21 @@
   );
 }
 
+.surface,
 .depth {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: var(--depth);
   pointer-events: none;
+}
+
+.surface { object-position: center 45%; }
+
+.depth {
+  opacity: var(--depth);
+  object-position: center 40%;
 }
 
 .rays {

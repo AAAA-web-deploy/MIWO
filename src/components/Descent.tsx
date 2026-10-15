@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { art } from '../assets';
+import { scenes } from '../config/scenes';
 import styles from './Descent.module.css';
 
 const CANDLES = [
@@ -43,7 +43,8 @@ export function Descent() {
   return (
     <section ref={ref} className={styles.descent} aria-label="Sinking from the surface">
       <div className={styles.sticky}>
-        <img className={styles.depth} src={art.oceanDepth} alt="" />
+        <img className={styles.surface} src={scenes.oceanWide} alt="" />
+        <img className={styles.depth} src={scenes.underwater} alt="" loading="lazy" />
         <div className={styles.rays} aria-hidden="true" />
         <div className={styles.candles} aria-hidden="true">
           {CANDLES.map((candle) => (

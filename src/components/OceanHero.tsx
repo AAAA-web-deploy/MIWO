@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { art } from '../assets';
+import { scenes } from '../config/scenes';
 import { WHALE_MODE_MS } from '../config/timings';
 import styles from './OceanHero.module.css';
 
@@ -38,21 +38,13 @@ export function OceanHero({ whaleOn, onWhale }: Props) {
 
   return (
     <section id="ocean" className={`${styles.hero} ${whaleOn ? styles.whaleOn : ''}`} aria-labelledby="miwo-title">
-      {/* Painterly sky sits above the flat ocean SVG, which is only the sea foundation. */}
-      <div className={styles.sky} />
-      <div className={styles.sun} aria-hidden="true" />
-      <div className={styles.warm} aria-hidden="true" />
-      <div className={styles.cloudA} aria-hidden="true" />
-      <div className={styles.cloudB} aria-hidden="true" />
-      <div className={styles.cloudC} aria-hidden="true" />
-      <div className={styles.seaPaint} />
-      <img className={styles.plate} src={art.oceanSurface} alt="" />
-      <DistantWhale />
+      <img className={styles.plate} src={scenes.ocean} alt="" />
+      <div className={styles.lens} aria-hidden="true" />
       <div className={styles.bubbles} aria-hidden="true">
         {BUBBLES.map((bubble) => (
           <img
             key={`${bubble.l}-${bubble.b}`}
-            src={art.bubble}
+            src={scenes.bubble}
             alt=""
             className={styles.bubble}
             style={{
@@ -64,28 +56,6 @@ export function OceanHero({ whaleOn, onWhale }: Props) {
             }}
           />
         ))}
-      </div>
-      <div className={styles.waveBack}>
-        <div className={styles.waveTrack}>
-          <img src={art.wave} alt="" />
-          <img src={art.wave} alt="" />
-        </div>
-      </div>
-      <div className={styles.miwoSlot}>
-        <img
-          className={styles.miwo}
-          src={art.costume}
-          alt="MIWO in a blue whale costume, standing in the daylight ocean"
-          width={1050}
-          height={1050}
-          fetchPriority="high"
-        />
-      </div>
-      <div className={styles.waveFront}>
-        <div className={styles.waveTrack}>
-          <img src={art.wave} alt="" />
-          <img src={art.wave} alt="" />
-        </div>
       </div>
       <div className={styles.copy}>
         <h1 id="miwo-title">
@@ -119,21 +89,5 @@ export function OceanHero({ whaleOn, onWhale }: Props) {
         )}
       </div>
     </section>
-  );
-}
-
-function DistantWhale() {
-  return (
-    <svg className={styles.whale} viewBox="0 0 640 280" aria-hidden="true">
-      <path
-        d="M40 150 Q20 70 90 48 C130 78 170 96 210 108 C300 20 470 28 560 90 Q610 70 630 20 Q656 100 610 150 Q604 190 540 214 C390 270 150 230 70 176 Z"
-        fill="#2f86c4"
-        stroke="#d7f3ff"
-        strokeWidth="8"
-      />
-      <ellipse cx="300" cy="150" rx="160" ry="36" fill="#9fd4f4" opacity="0.75" />
-      <circle cx="112" cy="92" r="7" fill="#102840" />
-      <path d="M96 118 Q120 142 156 128" stroke="#e7f8ff" strokeWidth="6" fill="none" strokeLinecap="round" />
-    </svg>
   );
 }
