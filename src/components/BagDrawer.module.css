@@ -1,16 +1,16 @@
 .sheet h2 {
   margin: 0.15rem 0 0;
   font-family: Fredoka, Nunito, sans-serif;
-  font-size: 2rem;
+  font-size: 2.15rem;
   color: #14233b;
 }
 
 .kicker {
   margin: 0;
   letter-spacing: 0.14em;
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   font-weight: 800;
-  color: #5c4296;
+  color: #5c3d96;
 }
 
 .ticker {
@@ -31,7 +31,7 @@
 }
 
 .sheet dt {
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   letter-spacing: 0.08em;
   font-weight: 800;
   color: #5c4296;
@@ -44,14 +44,14 @@
   display: block;
   margin-top: 0.3rem;
   font-weight: 700;
-  font-size: 0.82rem;
+  font-size: 1rem;
   color: #3d4d66;
 }
 
 .sheet code {
   display: block;
   overflow-wrap: anywhere;
-  font-size: 0.85rem;
+  font-size: 1rem;
   margin-bottom: 0.4rem;
 }
 

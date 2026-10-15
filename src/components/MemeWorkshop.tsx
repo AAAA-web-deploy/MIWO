@@ -58,7 +58,7 @@ export function MemeWorkshop({ spriteId, onSprite }: Props) {
     <section
       id="workshop"
       className={styles.dock}
-      style={{ backgroundImage: `linear-gradient(180deg, rgba(7, 18, 36, 0.28), rgba(7, 18, 36, 0.62)), url(${scenes.oceanWide})` }}
+      style={{ backgroundImage: `linear-gradient(180deg, rgba(255, 250, 243, 0.22), rgba(22, 48, 74, 0.45)), url(${scenes.oceanWide})` }}
       aria-labelledby="workshop-title"
     >
       <div className={styles.plank}>

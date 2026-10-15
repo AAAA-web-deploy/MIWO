@@ -14,15 +14,33 @@
 
 .bar > * { pointer-events: auto; }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex: none;
+  text-decoration: none;
+  color: #fffaf3;
+}
+
 .logo {
-  width: 48px;
-  height: 48px;
+  width: 76px;
+  height: 76px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid rgba(255, 247, 230, 0.8);
-  box-shadow: 0 6px 16px rgba(8, 18, 36, 0.28);
+  border: 3px solid rgba(255, 250, 243, 0.92);
+  box-shadow: 0 8px 18px rgba(8, 18, 36, 0.28);
   background: #d7f1ff;
   flex: none;
+}
+
+.mark {
+  font-family: Fredoka, Nunito, sans-serif;
+  font-weight: 700;
+  font-size: 1.65rem;
+  letter-spacing: 0.03em;
+  color: #fffaf3;
+  text-shadow: 0 2px 12px rgba(8, 18, 36, 0.7);
 }
 
 .logo img {
@@ -47,7 +65,7 @@
   font-family: Fredoka, Nunito, sans-serif;
   font-weight: 650;
   letter-spacing: 0.07em;
-  font-size: 0.78rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -76,7 +94,9 @@
       "nav nav";
   }
 
-  .withSkip .logo { grid-area: logo; }
+  .logo { width: 62px; height: 62px; }
+  .mark { font-size: 1.3rem; }
+  .withSkip .brand { grid-area: logo; }
   .withSkip .skip { grid-area: skip; justify-self: end; }
   .withSkip .nav {
     grid-area: nav;

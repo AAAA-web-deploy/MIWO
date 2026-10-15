@@ -20,6 +20,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center 40%;
+  filter: brightness(1.1) saturate(0.92);
 }
 
 .caption,
@@ -43,7 +44,8 @@
   margin: 0;
   max-width: 14ch;
   font-family: Fredoka, Nunito, sans-serif;
-  font-size: clamp(2rem, 6vw, 3.4rem);
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  color: #fffaf3;
   line-height: 0.95;
   text-shadow: 0 10px 24px rgba(40, 16, 8, 0.55);
 }
@@ -87,7 +89,8 @@
 .fine {
   max-width: 42rem;
   margin: 0;
-  font-size: 0.82rem;
+  font-size: 1rem;
+  color: #fffaf3;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
 }
 

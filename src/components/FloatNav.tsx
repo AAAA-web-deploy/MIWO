@@ -12,8 +12,9 @@ type Props = {
 export function FloatNav({ introActive, onSkip, onCrew, onBag, onMeme }: Props) {
   return (
     <div className={`${styles.bar} ${introActive ? styles.withSkip : ''}`}>
-      <a className={styles.logo} href="#ocean" aria-label="MICRO PANIC, back to the surface">
-        <img src={scenes.logo} alt="" width={369} height={377} />
+      <a className={styles.brand} href="#ocean" aria-label="MICRO PANIC, $MIWO, back to the surface">
+        <img className={styles.logo} src={scenes.logo} alt="" width={369} height={377} />
+        <span className={styles.mark}>$MIWO</span>
       </a>
       <nav className={styles.nav} aria-label="Crew and bag">
         <button type="button" onClick={onCrew}>CREW</button>

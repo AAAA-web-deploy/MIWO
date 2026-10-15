@@ -27,7 +27,7 @@ export const scenes = {
     calm: `${root}/reactions/calm_confidence.webp`,
     temptation: `${root}/reactions/temptation.webp`,
     suspicion: `${root}/reactions/suspicion.webp`,
-    embarrassment: `${root}/reactions/embarrassment.webp`,
+    embarrassment: `${root}/reactions/embarrassment.png`,
     relief: `${root}/reactions/relief.webp`,
     delight: `${root}/reactions/delight.webp`,
     patience: `${root}/reactions/patience.webp`,
