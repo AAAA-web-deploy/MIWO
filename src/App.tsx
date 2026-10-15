@@ -126,7 +126,7 @@ export function App() {
         <IntroStage key={run} active={mode === 'intro'} fading={mode === 'ready'} onDone={finishIntro} />
       )}
       <main id="content" tabIndex={-1} aria-hidden={mode === 'intro' ? true : undefined}>
-        <OceanHero whaleOn={whaleOn} onWhale={setWhaleOn} onOpen={openBag} />
+        <OceanHero whaleOn={whaleOn} onWhale={setWhaleOn} />
         <Descent />
         <MoodSea
           activeId={moodId}

@@ -21,10 +21,9 @@ const BUBBLES = [
 type Props = {
   whaleOn: boolean;
   onWhale: (active: boolean) => void;
-  onOpen: () => void;
 };
 
-export function OceanHero({ whaleOn, onWhale, onOpen }: Props) {
+export function OceanHero({ whaleOn, onWhale }: Props) {
   const timer = useRef<number | null>(null);
 
   useEffect(() => () => {
@@ -59,18 +58,10 @@ export function OceanHero({ whaleOn, onWhale, onOpen }: Props) {
         ))}
       </div>
       <div className={styles.copy}>
-        <div className={styles.headline}>
-          <button type="button" className={styles.buoy} onClick={onOpen} aria-label="Open the bag">
-            <span className={styles.float} aria-hidden="true">
-              <span className={styles.ring} />
-              <span className={styles.body} />
-            </span>
-          </button>
-          <h1 id="miwo-title">
-            <span>MICRO</span>
-            <span>PANIC</span>
-          </h1>
-        </div>
+        <h1 id="miwo-title">
+          <span>MICRO</span>
+          <span>PANIC</span>
+        </h1>
         <p className={styles.ticker}>$MIWO</p>
         <p className={styles.slogan}>
           Micro Bag.

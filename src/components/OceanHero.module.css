@@ -196,19 +196,6 @@
   text-align: center;
 }
 
-.headline {
-  position: relative;
-  display: inline-block;
-  margin: 0.6rem 0 0.35rem 0.4rem;
-  padding: 0.35rem 0.75rem 0.28rem;
-  border: 4px solid #17233f;
-  border-radius: 18px;
-  background: rgba(255, 248, 238, 0.16);
-  box-shadow:
-    0 0 0 3px rgba(255, 248, 238, 0.95),
-    0 10px 22px rgba(8, 20, 40, 0.35);
-}
-
 .copy h1 {
   margin: 0;
   display: flex;
@@ -220,50 +207,6 @@
   letter-spacing: -0.03em;
   color: #fff8ee;
   text-shadow: 0 8px 22px rgba(8, 20, 40, 0.72);
-}
-
-.buoy {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  transform: translate(-38%, -46%);
-  appearance: none;
-  border: 0;
-  padding: 0;
-  background: transparent;
-  cursor: pointer;
-}
-
-.float {
-  width: 52px;
-  height: 68px;
-  display: grid;
-  justify-items: center;
-  animation: hatchBob 3.2s ease-in-out infinite;
-}
-
-.ring {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 4px solid #f4d35e;
-  box-shadow: inset 0 0 0 3px #17233f;
-}
-
-.body {
-  width: 42px;
-  height: 44px;
-  margin-top: -4px;
-  border-radius: 12px 12px 16px 16px;
-  background: repeating-linear-gradient(180deg, #e85d4c 0 8px, #f4efe6 8px 16px);
-  border: 3px solid #17233f;
-  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.18);
-}
-
-@keyframes hatchBob {
-  0%, 100% { transform: translateY(0) rotate(-3deg); }
-  50% { transform: translateY(-6px) rotate(3deg); }
 }
 
 .ticker {
@@ -350,7 +293,7 @@
 @media (max-width: 899px) {
   .hero { padding-top: 9.2rem; }
   .copy { display: contents; }
-  .headline { order: 1; justify-self: center; }
+  .copy h1,
   .ticker,
   .slogan { order: 1; width: 100%; text-align: center; }
   .miwoSlot { order: 2; }

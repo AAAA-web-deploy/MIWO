@@ -14,6 +14,55 @@
 
 .bar > * { pointer-events: auto; }
 
+.headline {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex: none;
+  padding: 0.22rem 0.75rem 0.22rem 0.4rem;
+  border: 4px solid #17233f;
+  border-radius: 999px;
+  background: rgba(8, 20, 40, 0.28);
+  box-shadow:
+    0 0 0 3px rgba(255, 248, 238, 0.95),
+    0 8px 18px rgba(8, 18, 36, 0.28);
+}
+
+.buoy {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  flex: none;
+}
+
+.float {
+  width: 40px;
+  height: 52px;
+  display: grid;
+  justify-items: center;
+}
+
+.ring {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid #f4d35e;
+  box-shadow: inset 0 0 0 2px #17233f;
+}
+
+.body {
+  width: 32px;
+  height: 34px;
+  margin-top: -3px;
+  border-radius: 10px 10px 14px 14px;
+  background: repeating-linear-gradient(180deg, #e85d4c 0 6px, #f4efe6 6px 12px);
+  border: 2px solid #17233f;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.18);
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -96,7 +145,7 @@
 
   .logo { width: 62px; height: 62px; }
   .mark { font-size: 1.3rem; }
-  .withSkip .brand { grid-area: logo; }
+  .withSkip .headline { grid-area: logo; }
   .withSkip .skip { grid-area: skip; justify-self: end; }
   .withSkip .nav {
     grid-area: nav;
