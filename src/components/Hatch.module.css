@@ -14,16 +14,20 @@
   appearance: none;
   border: 0;
   background: transparent;
-  color: #fff7e6;
+  color: #fffaf3;
   cursor: pointer;
   display: grid;
   justify-items: center;
-  gap: 0.8rem;
+  gap: 0.9rem;
   margin: 0 auto;
   font-family: Fredoka, Nunito, sans-serif;
-  font-size: 1.65rem;
-  color: #fffaf3;
   font-weight: 650;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  line-height: 1.12;
+  color: #fffaf3;
 }
 
 .float {
