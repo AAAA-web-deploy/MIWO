@@ -13,7 +13,7 @@
   inset: -28px;
   z-index: 0;
   background: linear-gradient(180deg, #3d7ea0, #1d4e72 42%, #16385a);
-  filter: blur(12px);
+  filter: blur(9px);
   transform: scale(1.06);
 }
 
